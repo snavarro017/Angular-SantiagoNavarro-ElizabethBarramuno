@@ -1,0 +1,11 @@
+<!--*ngIf se encarga de mostrar los datos de un juego en particular -->
+<div *ngIf="juego">
+  <h2>{{ juego.name | uppercase }} </h2>
+  <div><span>id: </span>{{juego.id}}</div>
+  <div>
+    <label>Nombre:
+      <input [(ngModel)]="juego.name" placeholder="Nombre del juego">
+    </label>
+  </div>
+  <button class="volver" (click)="volver()">Volver</button>  &nbsp;<button class="guardar "(click)="guardar()">Guardar</button>
+</div>

@@ -1,0 +1,13 @@
+<div id="search-component">
+  <h4>Buscar Juego</h4>
+  <!--se genera un input para buscar un juego especifico -->
+  <input #searchBox id="search-box" (keyup)="search(searchBox.value)"/>
+  <ul class="search-result">
+    <!--*ngFor recorre los juegos hasta encontrar el juego que se esta buscando -->
+    <li *ngFor="let juego of juegos$ | async">
+      <a routerLink="/detail/{{juego.id}}">
+        {{juego.name}}
+      </a>
+    </li>
+  </ul>
+</div>

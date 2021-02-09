@@ -1,0 +1,12 @@
+<h2 align="center">Top juegos</h2>
+<div class="grid grid-pad">
+  <!--*ngFor es el encargado de recorre y mostrar cada uno de los juegos -->
+<a *ngFor="let juego of juegos" class="col-1-4"
+routerLink="/detail/{{juego.id}}">
+  <div class="module juego">
+    <h4>{{juego.name}}</h4>
+  </div>
+</a>
+</div>
+<!--selector de juego-search comnponent -->
+<app-juego-search></app-juego-search>

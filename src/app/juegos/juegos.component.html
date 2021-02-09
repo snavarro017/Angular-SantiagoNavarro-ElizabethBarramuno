@@ -1,0 +1,22 @@
+<br/>
+<div>
+  <label>
+    Nombre del juego:
+    <input #nombreJuego>
+  </label>
+  <!--llama a la funcion add y añade el nombre del juego dentro de la lista de juegos -->
+  &nbsp;<button class="agregar" (click)="add(nombreJuego.value); nombreJuego.value='' ">
+    Agregar
+  </button>
+</div>
+<h2>Lista de Juegos</h2>
+<ul class="juegos">
+  <!--*ngFor recorre hasta encontrar el juego -->
+  <li *ngFor="let juego of juegos">
+    <a routerLink="/detail/{{juego.id}}">
+      <span class="badge">{{juego.id}}</span>{{juego.name}}
+    </a>
+    <!--llama a la funcion delete y borra el juego que se selecciona -->
+    <button class="delete" title="Borrar juego" (click)="delete(juego)">X</button>
+  </li>
+</ul>

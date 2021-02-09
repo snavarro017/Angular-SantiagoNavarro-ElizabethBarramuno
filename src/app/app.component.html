@@ -1,0 +1,10 @@
+  <h1>
+    Bienvenido a {{ title }}!
+  </h1>
+  <nav>
+    <a routerLink="/dashboard">Dashboard</a>
+    <a routerLink="/juegos">Juegos</a>
+  </nav>
+
+<router-outlet></router-outlet> <!--Invoca al componente con selector app-juegos (juegos.component) -->
+<app-mensajes></app-mensajes><!--Invoca al componente con selector app-mensajes (mensajes.component) -->
